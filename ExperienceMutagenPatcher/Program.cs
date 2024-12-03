@@ -68,8 +68,8 @@ namespace ExperienceMutagenPatcher
             }
 
             loadPath = state.DataFolderPath;
-            Directory.CreateDirectory(state.DataFolderPath + @"\SKSE\Plugins\Experience\Races\");
-            File.WriteAllText(state.DataFolderPath + @"\SKSE\Plugins\Experience\Races\GeneratedExperiencePatch.ini", ini.ToString());
+            Directory.CreateDirectory(Path.Combine(state.DataFolderPath, "SKSE", "Plugins", "Experience", "Races"));
+            File.WriteAllText(Path.Combine(state.DataFolderPath, "SKSE", "Plugins", "Experience", "Races", "GeneratedExperiencePatch.ini", ini.ToString()));
         }
     }
 }
